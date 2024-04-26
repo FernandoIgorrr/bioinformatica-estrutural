@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:bioinformatica-estrutural": "node dist/bioinformatica-estrutural/server/server.mjs",
-    "deploy:ghdocs":"ng build --configuration production --output-path docs/browser  --base-href /bioinformatica-estrutural/browser/"
+    "deploy:ghdocs":"ng build --configuration production --output-path docs  --base-href /bioinformatica-estrutural/browser"
   },
   "private": true,
   "dependencies": {
