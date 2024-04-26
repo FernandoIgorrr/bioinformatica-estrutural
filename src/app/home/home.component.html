@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+  <!-- <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button> -->
+  <span> BIOINFORMÁTICA ESTRUTURAL </span>
+  <span class="spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+  <i class="fab fa-github"></i>
+  </button>
+</mat-toolbar>
+   <main class="center-on">
+
+    <mat-tab-group>
+      <mat-tab *ngFor="let tab of tabs; let index = index" class="tab-title">
+        <ng-template mat-tab-label>{{tab.title}}</ng-template>
+         <ng-template [ngComponentOutlet]="tab.content"></ng-template>
+      </mat-tab>
+    </mat-tab-group>
+
+
+    <!-- <mat-tab-group>
+      <mat-tab label="PROSITE motif pattern"> <app-prosite-motif-pattern></app-prosite-motif-pattern> </mat-tab>
+      <mat-tab label="Frequency matrix calculator"> Content 2 </mat-tab>
+      <mat-tab label="Pssm calculator"> Content 3 </mat-tab>
+      <mat-tab label="Hmm's calculator"> Content 3 </mat-tab>
+    </mat-tab-group> -->
+
+<!--
+    <div *ngIf="protein.length > 0" class="fasta-container">
+      <ul>
+        <li *ngFor="let entry of protein">
+          <div>
+            <strong>{{ entry.name }}</strong>
+          </div>
+          <!-- <div class="sequence">{{ entry.sequence.toString() | breakLines }}</div> -->
+
+         <!--  <div *ngFor="let aminoacid of entry.sequence">
+            <p>{{ aminoacid.showAminoacid() }}</p>
+          </div>
+        </li>
+      </ul>
+    </div> -->
+  </main>
