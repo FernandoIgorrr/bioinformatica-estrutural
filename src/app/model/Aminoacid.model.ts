@@ -1,4 +1,4 @@
-import { SubstitutionScoreMatrix } from "./SubstitutionScoreMatrix.model";
+import { BlossumMatrix62, SubstitutionScoreMatrix } from "./SubstitutionScoreMatrix.model";
 
 export class Aminoacid {
   name: string;
@@ -13,7 +13,13 @@ export class Aminoacid {
       this.classification = classification;
   }
 
-  static getAminoacid(letter: string): Aminoacid {
+  /*
+  Função para instanciar um amoniácido de acordo com sua letra representante.
+  */
+  static getAminoacid(letter: string | null): Aminoacid {
+      if (letter === null)
+        return AMINOACIDS.find((aminoacid) => aminoacid.l1 === '0') || new Aminoacid('Gap',L1.NONE,L3.NONE ,Classification.NONE);
+
       const aminoacidFound = AMINOACIDS.find((aminoacid) => aminoacid.l1 === letter);
       return aminoacidFound || new Aminoacid('Gap',L1.gap_dot,L3.gap_dot,Classification.NONE);
   }
@@ -21,15 +27,33 @@ export class Aminoacid {
   public equals (aminoacid : Aminoacid) : boolean {
     return this.l1 === aminoacid.l1 && this.l3 === aminoacid.l3 && this.name === aminoacid.name && this.classification === aminoacid.classification;
   }
-
-  public equalsClassification (aminoacid : Aminoacid) : Boolean{
+ /*
+    Método de comparação de conservação de aminoácido de acordo com sua classificação.
+  */
+  public equalsClassification (aminoacid : Aminoacid) : boolean{
     return this.classification === aminoacid.classification;
   }
+
+  /*
+    Método de comparação de conservação de aminoácido de acordo com os padrões:
+    1 - Matriz Blossum 62;
+    2 - cujo Score seja maior igual a 1.
+  */
+  public equalsSubstitutionMatrixBlossum62_1(aminoaic : Aminoacid) : boolean {
+    return this.substitutionValidation(aminoaic,BlossumMatrix62,1);
+  }
+
+  /*
+    Método para retorna o score de conservação dos aminoácidos em questão, dada uma matriz de substituição.
+  */
 
   public substitutionScore (aminoaic : Aminoacid, matrix : SubstitutionScoreMatrix) : number{
     return matrix[this.l1][aminoaic.l1];
   }
-
+  /*
+    Método de comparação de conservação de aminoácido com matrzies blossum generalizada:
+    você escolhe a matriz e o threshold para o score.
+  */
   public substitutionValidation (aminoaic : Aminoacid, matrix : SubstitutionScoreMatrix, substitution_score_threshold : number) : boolean{
     return this.substitutionScore(aminoaic,matrix) >= substitution_score_threshold;
   }
@@ -60,6 +84,7 @@ enum L1 {
   V = 'V',
   W = 'W',
   Y = 'Y',
+  NONE = '0',
   gap_dot = '.',
   gap_hifen = '-'
 }
@@ -85,6 +110,7 @@ enum L3 {
   VAL = 'Val',
   TRP = 'Trp',
   TYR = 'Tyr',
+  NONE = '0',
   gap_dot = '.',
   gap_hifen = '-'
 }
@@ -140,7 +166,7 @@ const AMINOACIDS: Aminoacid[] = [
   new Aminoacid('Histidine', L1.H, L3.HIS, Classification.AROMATIC),
   new Aminoacid('Tyrosine', L1.Y, L3.TYR, Classification.AROMATIC),
 
-
+  new Aminoacid('None', L1.NONE, L3.NONE, Classification.NONE),
   new Aminoacid('Gap', L1.gap_dot, L3.gap_dot, Classification.NONE),
   new Aminoacid('Gap', L1.gap_hifen, L3.gap_hifen, Classification.NONE)
 ];

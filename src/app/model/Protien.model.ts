@@ -11,9 +11,9 @@ export class Protein{
 
   sequenceLetter(): string {
     let str = "";
-    for (let amino of this.sequence){
+    for (const amino of this.sequence){
         str += amino.l1;
     }
     return str;
-  };
+  }
 }

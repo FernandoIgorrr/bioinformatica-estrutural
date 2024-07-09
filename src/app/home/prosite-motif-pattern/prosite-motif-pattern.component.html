@@ -64,7 +64,14 @@
                       <span>
                         PROSITE motif pattern <strong>{{i + 1}}</strong>
                       </span>
-                      <span class="cursor_pointer" (click)="copyText($event, prosite_assinature.join('-'))">
+                      <span
+                        class="cursor_pointer"
+                        role="button"
+                        (click)="copyText($event, prosite_assinature.join('-'))"
+                        (keyup.enter)="copyText($event, prosite_assinature.join('-'))"
+                        tabindex="0"
+                        >
+
                         <fa-icon [icon]="['fas', 'copy']"></fa-icon>
                         copiar
                       </span>

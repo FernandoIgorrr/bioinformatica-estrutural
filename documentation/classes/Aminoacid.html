@@ -1,0 +1,1161 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>bioinformatica-estrutural documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">bioinformatica-estrutural documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content class">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Classes</li>
+  <li class="breadcrumb-item" >Aminoacid</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/model/Aminoacid.model.ts</code>
+        </p>
+
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#classification" >classification</a>
+                            </li>
+                            <li>
+                                <a href="#l1" >l1</a>
+                            </li>
+                            <li>
+                                <a href="#l3" >l3</a>
+                            </li>
+                            <li>
+                                <a href="#name" >name</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#equals" >equals</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#equalsClassification" >equalsClassification</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#equalsSubstitutionMatrixBlossum62_1" >equalsSubstitutionMatrixBlossum62_1</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#getAminoacid" >getAminoacid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#showAminoacid" >showAminoacid</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#substitutionScore" >substitutionScore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#substitutionValidation" >substitutionValidation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, l1: <a href="../undefineds/L1.html" target="_self">L1</a>, l3: <a href="../undefineds/L3.html" target="_self">L3</a>, classification: <a href="../undefineds/Classification.html" target="_self">Classification</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/model/Aminoacid.model.ts:7</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>name</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>l1</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/enumerations.html#L1" target="_self" >L1</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>l3</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/enumerations.html#L3" target="_self" >L3</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>classification</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../miscellaneous/enumerations.html#Classification" target="_self" >Classification</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="classification"></a>
+                    <span class="name">
+                        <span ><b>classification</b></span>
+                        <a href="#classification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#Classification" target="_self" >Classification</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/model/Aminoacid.model.ts:7</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="l1"></a>
+                    <span class="name">
+                        <span ><b>l1</b></span>
+                        <a href="#l1"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#L1" target="_self" >L1</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="5" class="link-to-prism">src/app/model/Aminoacid.model.ts:5</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="l3"></a>
+                    <span class="name">
+                        <span ><b>l3</b></span>
+                        <a href="#l3"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#L3" target="_self" >L3</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/model/Aminoacid.model.ts:6</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="name"></a>
+                    <span class="name">
+                        <span ><b>name</b></span>
+                        <a href="#name"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="4" class="link-to-prism">src/app/model/Aminoacid.model.ts:4</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="equals"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>equals</b></span>
+                        <a href="#equals"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>equals(aminoacid: <a href="../classes/Aminoacid.html" target="_self">Aminoacid</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="27"
+                                    class="link-to-prism">src/app/model/Aminoacid.model.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>aminoacid</td>
+                                            <td>
+                                                            <code><a href="../classes/Aminoacid.html" target="_self" >Aminoacid</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="equalsClassification"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>equalsClassification</b></span>
+                        <a href="#equalsClassification"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>equalsClassification(aminoacid: <a href="../classes/Aminoacid.html" target="_self">Aminoacid</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="33"
+                                    class="link-to-prism">src/app/model/Aminoacid.model.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>aminoacid</td>
+                                            <td>
+                                                            <code><a href="../classes/Aminoacid.html" target="_self" >Aminoacid</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="equalsSubstitutionMatrixBlossum62_1"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>equalsSubstitutionMatrixBlossum62_1</b></span>
+                        <a href="#equalsSubstitutionMatrixBlossum62_1"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>equalsSubstitutionMatrixBlossum62_1(aminoaic: <a href="../classes/Aminoacid.html" target="_self">Aminoacid</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="42"
+                                    class="link-to-prism">src/app/model/Aminoacid.model.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>aminoaic</td>
+                                            <td>
+                                                            <code><a href="../classes/Aminoacid.html" target="_self" >Aminoacid</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAminoacid"></a>
+                    <span class="name">
+                            <span class="modifier">Static</span>
+                        <span ><b>getAminoacid</b></span>
+                        <a href="#getAminoacid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getAminoacid(letter: string | null)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="19"
+                                    class="link-to-prism">src/app/model/Aminoacid.model.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>letter</td>
+                                            <td>
+                                                        <code>string | null</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../classes/Aminoacid.html" target="_self" >Aminoacid</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showAminoacid"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>showAminoacid</b></span>
+                        <a href="#showAminoacid"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>showAminoacid()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="61"
+                                    class="link-to-prism">src/app/model/Aminoacid.model.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="substitutionScore"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>substitutionScore</b></span>
+                        <a href="#substitutionScore"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>substitutionScore(aminoaic: <a href="../classes/Aminoacid.html" target="_self">Aminoacid</a>, matrix: <a href="../interfaces/SubstitutionScoreMatrix.html" target="_self">SubstitutionScoreMatrix</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="50"
+                                    class="link-to-prism">src/app/model/Aminoacid.model.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>aminoaic</td>
+                                            <td>
+                                                            <code><a href="../classes/Aminoacid.html" target="_self" >Aminoacid</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>matrix</td>
+                                            <td>
+                                                            <code><a href="../interfaces/SubstitutionScoreMatrix.html" target="_self" >SubstitutionScoreMatrix</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="substitutionValidation"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>substitutionValidation</b></span>
+                        <a href="#substitutionValidation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>substitutionValidation(aminoaic: <a href="../classes/Aminoacid.html" target="_self">Aminoacid</a>, matrix: <a href="../interfaces/SubstitutionScoreMatrix.html" target="_self">SubstitutionScoreMatrix</a>, substitution_score_threshold: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="57"
+                                    class="link-to-prism">src/app/model/Aminoacid.model.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>aminoaic</td>
+                                            <td>
+                                                            <code><a href="../classes/Aminoacid.html" target="_self" >Aminoacid</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>matrix</td>
+                                            <td>
+                                                            <code><a href="../interfaces/SubstitutionScoreMatrix.html" target="_self" >SubstitutionScoreMatrix</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>substitution_score_threshold</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { BlossumMatrix62, SubstitutionScoreMatrix } from &quot;./SubstitutionScoreMatrix.model&quot;;
+
+export class Aminoacid {
+  name: string;
+  l1: L1;
+  l3: L3;
+  classification: Classification;
+
+  constructor(name: string, l1: L1, l3: L3, classification: Classification) {
+      this.name &#x3D; name;
+      this.l1 &#x3D; l1;
+      this.l3 &#x3D; l3;
+      this.classification &#x3D; classification;
+  }
+
+  /*
+  Função para instanciar um amoniácido de acordo com sua letra representante.
+  */
+  static getAminoacid(letter: string | null): Aminoacid {
+      if (letter &#x3D;&#x3D;&#x3D; null)
+        return AMINOACIDS.find((aminoacid) &#x3D;&gt; aminoacid.l1 &#x3D;&#x3D;&#x3D; &#x27;0&#x27;) || new Aminoacid(&#x27;Gap&#x27;,L1.NONE,L3.NONE ,Classification.NONE);
+
+      const aminoacidFound &#x3D; AMINOACIDS.find((aminoacid) &#x3D;&gt; aminoacid.l1 &#x3D;&#x3D;&#x3D; letter);
+      return aminoacidFound || new Aminoacid(&#x27;Gap&#x27;,L1.gap_dot,L3.gap_dot,Classification.NONE);
+  }
+
+  public equals (aminoacid : Aminoacid) : boolean {
+    return this.l1 &#x3D;&#x3D;&#x3D; aminoacid.l1 &amp;&amp; this.l3 &#x3D;&#x3D;&#x3D; aminoacid.l3 &amp;&amp; this.name &#x3D;&#x3D;&#x3D; aminoacid.name &amp;&amp; this.classification &#x3D;&#x3D;&#x3D; aminoacid.classification;
+  }
+ /*
+    Método de comparação de conservação de aminoácido de acordo com sua classificação.
+  */
+  public equalsClassification (aminoacid : Aminoacid) : boolean{
+    return this.classification &#x3D;&#x3D;&#x3D; aminoacid.classification;
+  }
+
+  /*
+    Método de comparação de conservação de aminoácido de acordo com os padrões:
+    1 - Matriz Blossum 62;
+    2 - cujo Score seja maior igual a 1.
+  */
+  public equalsSubstitutionMatrixBlossum62_1(aminoaic : Aminoacid) : boolean {
+    return this.substitutionValidation(aminoaic,BlossumMatrix62,1);
+  }
+
+  /*
+    Método para retorna o score de conservação dos aminoácidos em questão, dada uma matriz de substituição.
+  */
+
+  public substitutionScore (aminoaic : Aminoacid, matrix : SubstitutionScoreMatrix) : number{
+    return matrix[this.l1][aminoaic.l1];
+  }
+  /*
+    Método de comparação de conservação de aminoácido com matrzies blossum generalizada:
+    você escolhe a matriz e o threshold para o score.
+  */
+  public substitutionValidation (aminoaic : Aminoacid, matrix : SubstitutionScoreMatrix, substitution_score_threshold : number) : boolean{
+    return this.substitutionScore(aminoaic,matrix) &gt;&#x3D; substitution_score_threshold;
+  }
+
+  public showAminoacid() : string{
+      return &#x60;Nome : ${this.name} | Símbolo : ${this.l1} | Iniciais : ${this.l3} | Classificação : ${this.classification}&#x60;;
+  }
+}
+
+enum L1 {
+  A &#x3D; &#x27;A&#x27;,
+  C &#x3D; &#x27;C&#x27;,
+  D &#x3D; &#x27;D&#x27;,
+  E &#x3D; &#x27;E&#x27;,
+  F &#x3D; &#x27;F&#x27;,
+  G &#x3D; &#x27;G&#x27;,
+  H &#x3D; &#x27;H&#x27;,
+  I &#x3D; &#x27;I&#x27;,
+  K &#x3D; &#x27;K&#x27;,
+  L &#x3D; &#x27;L&#x27;,
+  M &#x3D; &#x27;M&#x27;,
+  N &#x3D; &#x27;N&#x27;,
+  P &#x3D; &#x27;P&#x27;,
+  Q &#x3D; &#x27;Q&#x27;,
+  R &#x3D; &#x27;R&#x27;,
+  S &#x3D; &#x27;S&#x27;,
+  T &#x3D; &#x27;T&#x27;,
+  V &#x3D; &#x27;V&#x27;,
+  W &#x3D; &#x27;W&#x27;,
+  Y &#x3D; &#x27;Y&#x27;,
+  NONE &#x3D; &#x27;0&#x27;,
+  gap_dot &#x3D; &#x27;.&#x27;,
+  gap_hifen &#x3D; &#x27;-&#x27;
+}
+
+enum L3 {
+  ALA &#x3D; &#x27;Ala&#x27;,
+  CYS &#x3D; &#x27;Cys&#x27;,
+  ASP &#x3D; &#x27;Asp&#x27;,
+  GLU &#x3D; &#x27;Glu&#x27;,
+  PHE &#x3D; &#x27;Phe&#x27;,
+  GLY &#x3D; &#x27;Gly&#x27;,
+  HIS &#x3D; &#x27;His&#x27;,
+  ILE &#x3D; &#x27;Ile&#x27;,
+  LYS &#x3D; &#x27;Lys&#x27;,
+  LEU &#x3D; &#x27;Leu&#x27;,
+  MET &#x3D; &#x27;Met&#x27;,
+  ASN &#x3D; &#x27;Asn&#x27;,
+  PRO &#x3D; &#x27;Pro&#x27;,
+  GLN &#x3D; &#x27;Gln&#x27;,
+  ARG &#x3D; &#x27;Arg&#x27;,
+  SER &#x3D; &#x27;Ser&#x27;,
+  THR &#x3D; &#x27;Thr&#x27;,
+  VAL &#x3D; &#x27;Val&#x27;,
+  TRP &#x3D; &#x27;Trp&#x27;,
+  TYR &#x3D; &#x27;Tyr&#x27;,
+  NONE &#x3D; &#x27;0&#x27;,
+  gap_dot &#x3D; &#x27;.&#x27;,
+  gap_hifen &#x3D; &#x27;-&#x27;
+}
+
+enum Classification {
+  HYDROFOBIC &#x3D; &#x27;hydrofobic&#x27;,
+  NONPOLAR_ALIPHATIC &#x3D; &#x27;Nonpolar, aliphatic&#x27;,
+  AROMATIC &#x3D; &#x27;aromatic&#x27;,
+  POLAR_UNCHARGED &#x3D; &#x27;polar, uncharged&#x27;,
+  POSITIVELY_CHARGED &#x3D; &#x27;positivaly, charged&#x27;,
+  NEGATIVELY_CHARGED &#x3D; &#x27;negatively, charged&#x27;,
+
+  CYSTEINES &#x3D; &#x27;cysteines&#x27;,
+  GLYCINES &#x3D; &#x27;Glycines&#x27;,
+  PROLINES &#x3D; &#x27;prolines&#x27;,
+
+  NONE &#x3D; &#x27;none&#x27;
+}
+
+const AMINOACIDS: Aminoacid[] &#x3D; [
+  new Aminoacid(&#x27;Alanine&#x27;, L1.A, L3.ALA, Classification.HYDROFOBIC),
+  new Aminoacid(&#x27;Isoleucine&#x27;, L1.I, L3.ILE, Classification.HYDROFOBIC),
+  new Aminoacid(&#x27;Leucine&#x27;, L1.L, L3.LEU, Classification.HYDROFOBIC),
+  new Aminoacid(&#x27;Methionine&#x27;, L1.M, L3.MET, Classification.HYDROFOBIC),
+  new Aminoacid(&#x27;Phenylalanine&#x27;, L1.F, L3.PHE, Classification.HYDROFOBIC),
+  new Aminoacid(&#x27;Tryptophan&#x27;, L1.W, L3.TRP, Classification.HYDROFOBIC),
+  new Aminoacid(&#x27;Valine&#x27;, L1.V, L3.VAL, Classification.HYDROFOBIC),
+
+
+  new Aminoacid(&#x27;Lysine&#x27;, L1.K, L3.LYS, Classification.POSITIVELY_CHARGED),
+  new Aminoacid(&#x27;Arginine&#x27;, L1.R, L3.ARG, Classification.POSITIVELY_CHARGED),
+
+
+  new Aminoacid(&#x27;Glutamate&#x27;, L1.E, L3.GLU, Classification.NEGATIVELY_CHARGED),
+  new Aminoacid(&#x27;Aspartate&#x27;, L1.D, L3.ASP, Classification.NEGATIVELY_CHARGED),
+
+
+  new Aminoacid(&#x27;Asparagine&#x27;, L1.N, L3.ASN, Classification.POLAR_UNCHARGED),
+  new Aminoacid(&#x27;Glutamine&#x27;, L1.Q, L3.GLN, Classification.POLAR_UNCHARGED),
+  new Aminoacid(&#x27;Serine&#x27;, L1.S, L3.SER, Classification.POLAR_UNCHARGED),
+  new Aminoacid(&#x27;Threonine&#x27;, L1.T, L3.THR, Classification.POLAR_UNCHARGED),
+
+
+  new Aminoacid(&#x27;Cysteine&#x27;, L1.C, L3.CYS, Classification.CYSTEINES),
+
+
+  new Aminoacid(&#x27;Glycine&#x27;, L1.G, L3.GLY, Classification.GLYCINES),
+
+
+  new Aminoacid(&#x27;Proline&#x27;, L1.P, L3.PRO, Classification.PROLINES),
+
+
+  new Aminoacid(&#x27;Histidine&#x27;, L1.H, L3.HIS, Classification.AROMATIC),
+  new Aminoacid(&#x27;Tyrosine&#x27;, L1.Y, L3.TYR, Classification.AROMATIC),
+
+  new Aminoacid(&#x27;None&#x27;, L1.NONE, L3.NONE, Classification.NONE),
+  new Aminoacid(&#x27;Gap&#x27;, L1.gap_dot, L3.gap_dot, Classification.NONE),
+  new Aminoacid(&#x27;Gap&#x27;, L1.gap_hifen, L3.gap_hifen, Classification.NONE)
+];
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'Aminoacid.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

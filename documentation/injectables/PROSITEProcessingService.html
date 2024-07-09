@@ -1,0 +1,1249 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>bioinformatica-estrutural documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">bioinformatica-estrutural documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Injectables</li>
+  <li class="breadcrumb-item" >PROSITEProcessingService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" 
+                class="nav-link"
+                class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" 
+                class="nav-link"
+                
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/service/prosite-processing.service.ts</code>
+        </p>
+
+
+
+
+
+            <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#countGroupRepeatedStrings" >countGroupRepeatedStrings</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#fitxTresholdDivider" >fitxTresholdDivider</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#formatPROSITEmotifsPattern" >formatPROSITEmotifsPattern</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#groupRepeatedStrings" >groupRepeatedStrings</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#parseFasta" >parseFasta</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#processFasta" >processFasta</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#scatteredConservationPattern" >scatteredConservationPattern</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#xTresholdDivider" >xTresholdDivider</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fastaService: <a href="../injectables/FastaService.html" target="_self">FastaService</a>, listProcessingService: <a href="../injectables/ListProcessingService.html" target="_self">ListProcessingService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/service/prosite-processing.service.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fastaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FastaService.html" target="_self" >FastaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>listProcessingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ListProcessingService.html" target="_self" >ListProcessingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="countGroupRepeatedStrings"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>countGroupRepeatedStrings</b></span>
+                        <a href="#countGroupRepeatedStrings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>countGroupRepeatedStrings(fastaEntries: <a href="../interfaces/FastaEntry.html" target="_self">FastaEntry[]</a>, group_repeated_strings: string[][])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="155"
+                                    class="link-to-prism">src/app/service/prosite-processing.service.ts:155</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fastaEntries</td>
+                                            <td>
+                                                            <code><a href="../interfaces/FastaEntry.html" target="_self" >FastaEntry[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>group_repeated_strings</td>
+                                            <td>
+                                                        <code>string[][]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fitxTresholdDivider"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>fitxTresholdDivider</b></span>
+                        <a href="#fitxTresholdDivider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fitxTresholdDivider(PROSITE_motifs_pattern_x_threshold_divided: [][])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="241"
+                                    class="link-to-prism">src/app/service/prosite-processing.service.ts:241</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>PROSITE_motifs_pattern_x_threshold_divided</td>
+                                            <td>
+                                                        <code>[][]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatPROSITEmotifsPattern"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>formatPROSITEmotifsPattern</b></span>
+                        <a href="#formatPROSITEmotifsPattern"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>formatPROSITEmotifsPattern(PROSITE_motifs_pattern_x_threshold_divided: [][])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="255"
+                                    class="link-to-prism">src/app/service/prosite-processing.service.ts:255</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>PROSITE_motifs_pattern_x_threshold_divided</td>
+                                            <td>
+                                                        <code>[][]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="groupRepeatedStrings"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>groupRepeatedStrings</b></span>
+                        <a href="#groupRepeatedStrings"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>groupRepeatedStrings(scattered_conservation_pattern: string[])</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="130"
+                                    class="link-to-prism">src/app/service/prosite-processing.service.ts:130</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>scattered_conservation_pattern</td>
+                                            <td>
+                                                        <code>string[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parseFasta"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>parseFasta</b></span>
+                        <a href="#parseFasta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>parseFasta(content: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="18"
+                                    class="link-to-prism">src/app/service/prosite-processing.service.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>content</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>literal type[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="processFasta"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>processFasta</b></span>
+                        <a href="#processFasta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>processFasta(fastaContent: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, score_model_conservation: <a href="../undefineds/ScoreModel.html" target="_self">ScoreModel</a>, xthreshold: number | null)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="276"
+                                    class="link-to-prism">src/app/service/prosite-processing.service.ts:276</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fastaContent</td>
+                                            <td>
+                                                            <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>score_model_conservation</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#ScoreModel" target="_self" >ScoreModel</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>xthreshold</td>
+                                            <td>
+                                                        <code>number | null</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="scatteredConservationPattern"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>scatteredConservationPattern</b></span>
+                        <a href="#scatteredConservationPattern"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>scatteredConservationPattern(fastaEntries: <a href="../interfaces/FastaEntry.html" target="_self">FastaEntry[]</a>, score_model_conservation: <a href="../undefineds/ScoreModel.html" target="_self">ScoreModel</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="49"
+                                    class="link-to-prism">src/app/service/prosite-processing.service.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>fastaEntries</td>
+                                            <td>
+                                                            <code><a href="../interfaces/FastaEntry.html" target="_self" >FastaEntry[]</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>score_model_conservation</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/enumerations.html#ScoreModel" target="_self" >ScoreModel</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>string[]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="xTresholdDivider"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>xTresholdDivider</b></span>
+                        <a href="#xTresholdDivider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>xTresholdDivider(count_group_repeated_strings: [], xthreshold: number | null)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="216"
+                                    class="link-to-prism">src/app/service/prosite-processing.service.ts:216</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>count_group_repeated_strings</td>
+                                            <td>
+                                                        <code>[]</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+                                                <td>xthreshold</td>
+                                            <td>
+                                                        <code>number | null</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>[][]</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { FastaEntry } from &#x27;./../model/FastaEntry.model&#x27;;
+import { FastaService } from &#x27;./fasta.service&#x27;;
+import { ScoreModel } from &#x27;./../model/ScoreModel.enum&#x27;;
+import { Injectable } from &#x27;@angular/core&#x27;;
+import { Aminoacid } from &#x27;../model/Aminoacid.model&#x27;;
+import { ListProcessingService } from &#x27;./list-processing.service&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;,
+})
+export class PROSITEProcessingService {
+  //private conserved_map: string &#x3D; &#x27;&#x27;;
+
+  constructor(private fastaService: FastaService, private listProcessingService : ListProcessingService) {
+
+  }
+
+  public parseFasta(
+    content: string
+  ): { name: string; sequence: string }[] {
+
+        const lines &#x3D; content.split(&#x27;\n&#x27;);
+        const entries: { name: string; sequence: string }[] &#x3D; [];
+        //const entries2 : Protein[] &#x3D; [];
+        let name &#x3D; &#x27;&#x27;;
+        let sequence &#x3D; &#x27;&#x27;;
+        for (const line of lines) {
+          if (line.startsWith(&#x27;&gt;&#x27;)) {
+            if (name !&#x3D;&#x3D; &#x27;&#x27; &amp;&amp; sequence !&#x3D;&#x3D; &#x27;&#x27;) {
+              entries.push({ name, sequence });
+            }
+            name &#x3D; line.substring(1).trim(); // Remove o &quot;&gt;&quot; e espaços em branco
+            sequence &#x3D; &#x27;&#x27;; // Limpa a sequência para a próxima proteína
+          } else {
+            sequence +&#x3D; line.trim();
+          }
+        }
+        if (name !&#x3D;&#x3D; &#x27;&#x27; &amp;&amp; sequence !&#x3D;&#x3D; &#x27;&#x27;) {
+          entries.push({ name, sequence });
+        }
+        return entries;
+
+  }
+
+  /*
+   * Função para que recebe um array de entradas Fastas, que é um objetico
+   * no padrão {name,sequence}
+   */
+  private scatteredConservationPattern(
+    fastaEntries: FastaEntry[],
+    score_model_conservation: ScoreModel
+  ): string[] {
+
+        const scattered_conservation_pattern: string[] &#x3D; [];
+        const [fastaEntriesWithDashes, max_length] &#x3D; this.fastaService.completeSequencesWithDash(fastaEntries);
+
+        //console.log(&quot;MAXIMO: &quot; + max_length);
+
+        for (let i &#x3D; 0; i &lt; max_length; i++) {
+          const charactersAtPositionI &#x3D; fastaEntriesWithDashes.map(
+            (entry) &#x3D;&gt; entry.sequence[i]
+          );
+
+          //console.log(&quot;CARACTERES NA POSIÇÃO &quot; + i + &quot;DAS SEQUENCIAS: &quot; + charactersAtPositionI + &quot;\n&quot;);
+          //const currentlyChar &#x3D; fastaEntries[0].sequence[i];
+          const currentlyChar &#x3D; this.listProcessingService.findMostFrequentElement(charactersAtPositionI);
+
+          const fullConservation &#x3D; charactersAtPositionI.every(
+            (aminoacid) &#x3D;&gt; aminoacid &#x3D;&#x3D;&#x3D; charactersAtPositionI[0]
+          );
+
+
+          const conservation &#x3D;
+            score_model_conservation &#x3D;&#x3D;&#x3D; &#x27;BLOSUM62&#x27;
+              ? charactersAtPositionI.every((amino) &#x3D;&gt;
+                  Aminoacid.getAminoacid(
+                    amino
+                  ).equalsSubstitutionMatrixBlossum62_1(
+                    Aminoacid.getAminoacid(currentlyChar)
+                  )
+                )
+              : charactersAtPositionI.every((amino) &#x3D;&gt;
+                  Aminoacid.getAminoacid(amino).equalsClassification(
+                    Aminoacid.getAminoacid(currentlyChar)
+                  )
+                );
+
+          //console.log(&quot;(&quot; + i + &quot;) - CONSERVAÇÃO: &quot; + conservation);
+
+          if (fullConservation) {
+            if (currentlyChar &#x3D;&#x3D;&#x3D; &#x27;-&#x27; || currentlyChar &#x3D;&#x3D;&#x3D; &#x27;.&#x27;) {
+              //this.conserved_map +&#x3D; &#x27; &#x27;;
+              // prosite_motif_pattern +&#x3D; &quot;x&quot;;
+              scattered_conservation_pattern.push(&#x27;-&#x27;);
+
+            } else {
+              scattered_conservation_pattern.push(currentlyChar || &#x27;0&#x27;);
+
+              //this.conserved_map +&#x3D; &#x27;*&#x27;;
+            }
+          } else {
+            if (conservation) {
+              const uniqueCharacters &#x3D; [
+                ...new Set(charactersAtPositionI.join(&#x27;&#x27;)),
+              ];
+              scattered_conservation_pattern.push(
+                &#x27;[&#x27; + uniqueCharacters.join(&#x27;&#x27;) + &#x27;]&#x27;
+              );
+            } else {
+              /*esse if e else é para saber se tem gaps na colunas
+              se sim
+              isso significa que em pelo menos uma ptreína tem um
+              gap nessa coluna
+
+              se não, simplesmente adiciona um x
+              */
+              // if(charactersAtPositionI.includes(&#x27;-&#x27;))
+              //   scattered_conservation_pattern.push(&#x27;x_0&#x27;);
+              // else
+              // {
+                scattered_conservation_pattern.push(&#x27;x&#x27;);
+              //}
+            }
+          }
+      }
+      console.log(scattered_conservation_pattern);
+      return scattered_conservation_pattern;
+  }
+
+  private groupRepeatedStrings(
+    scattered_conservation_pattern: string[]
+  ): string[][] {
+
+        const result: string[][] &#x3D; [];
+        let temp: string[] &#x3D; [];
+
+        for (let i &#x3D; 0; i &lt; scattered_conservation_pattern.length; i++) {
+          if (
+            temp.length &#x3D;&#x3D;&#x3D; 0 ||
+            temp[temp.length - 1] &#x3D;&#x3D;&#x3D; scattered_conservation_pattern[i]
+          ) {
+            temp.push(scattered_conservation_pattern[i]);
+          } else {
+            result.push([...temp]);
+            temp &#x3D; [scattered_conservation_pattern[i]];
+          }
+        }
+        if (temp.length &gt; 0) {
+          result.push([...temp]);
+        }
+        console.log(result);
+        return result;
+  }
+
+  private countGroupRepeatedStrings(
+    fastaEntries: FastaEntry[],
+    group_repeated_strings: string[][]
+  ): [string, number][] {
+
+        const fastaEntriesWithDashes &#x3D; this.fastaService.completeSequencesWithDash(fastaEntries)[0];
+        let count_occurrences : number[] &#x3D; [];
+
+        const result: [string, number][] &#x3D; [];
+        let initial_position &#x3D; 0;
+        let final_position   &#x3D; -1;
+
+        const positions : [number,number][] &#x3D; [];
+
+        for (const repeats of group_repeated_strings) {
+          initial_position &#x3D; final_position + 1;
+          final_position &#x3D; initial_position + repeats.length - 1;
+
+          positions.push([initial_position,final_position]);
+
+          const tuple: [string, number] &#x3D; [repeats[0], repeats.length];
+
+
+          if(repeats[0] &#x3D;&#x3D;&#x3D; &#x27;x&#x27;){
+            for(const entry of fastaEntriesWithDashes){
+              const subSeq &#x3D; entry.sequence.slice(initial_position,final_position);
+              count_occurrences.push(subSeq.split(&#x27;-&#x27;).length - 1);
+            }
+            console.log(count_occurrences);
+            console.log(&quot;I: &quot; + initial_position + &quot; | F: &quot; + final_position);
+            console.log(&quot;**************************************&quot;);
+
+            const maxNumber &#x3D; repeats.length - Math.min(...count_occurrences);
+            const minNumber &#x3D; repeats.length - Math.max(...count_occurrences);
+
+            count_occurrences &#x3D; [];
+
+            if(maxNumber &#x3D;&#x3D;&#x3D; 0){
+              result.push(tuple);
+            }
+            else{
+              result.push([&#x27;x(&#x27; + minNumber + &#x27;,&#x27; + maxNumber +&#x27;)&#x27;,1]);
+            }
+
+          }
+          else{
+            result.push(tuple);
+          }
+        }
+
+
+
+        if (result[0][0] &#x3D;&#x3D;&#x3D; &#x27;x&#x27;) {
+          result.shift();
+        }
+        if (result[result.length - 1][0] &#x3D;&#x3D;&#x3D; &#x27;x&#x27;) result.pop();
+        //console.log(result);
+        return result;
+
+  }
+
+  private xTresholdDivider(
+    count_group_repeated_strings: [string, number][],
+    xthreshold: number | null
+  ):[string, number][][] {
+
+        const result: [string, number][][] &#x3D; [];
+        let aux: [string, number][] &#x3D; [];
+
+        if (xthreshold &#x3D;&#x3D;&#x3D; null) xthreshold &#x3D; 20;
+
+        for (const group of count_group_repeated_strings) {
+          if ((group[0] &#x3D;&#x3D;&#x3D; &#x27;x&#x27; &amp;&amp; group[1] &lt; xthreshold) || group[0] !&#x3D; &#x27;x&#x27;)
+            aux.push(group);
+          else if (aux.length &gt; 0) {
+            result.push(aux);
+            aux &#x3D; [];
+          }
+        }
+        if (aux.length &gt; 0) {
+          result.push(aux);
+        }
+        return result;
+
+  }
+
+  private fitxTresholdDivider(
+    PROSITE_motifs_pattern_x_threshold_divided: [string, number][][]
+  ): [string, number][][] {
+
+        const result: [string, number][][] &#x3D; [];
+        for (const motif of PROSITE_motifs_pattern_x_threshold_divided) {
+          if (motif.length !&#x3D;&#x3D; 0) {
+            result.push(motif);
+          }
+        }
+       return  result;
+
+  }
+
+  private formatPROSITEmotifsPattern(
+    PROSITE_motifs_pattern_x_threshold_divided: [string, number][][]
+  ): string[][] {
+        const result: string[][] &#x3D; [];
+        let aux: string[] &#x3D; [];
+
+        for (const pattern of PROSITE_motifs_pattern_x_threshold_divided) {
+          for (const conservation of pattern) {
+            if (conservation[1] &gt; 1) {
+              aux.push(conservation[0] + &#x27;(&#x27; + conservation[1] + &#x27;)&#x27;);
+            } else {
+              aux.push(conservation[0]);
+            }
+          }
+          result.push(aux);
+          aux &#x3D; [];
+        }
+        return result;
+
+  }
+
+  public processFasta(fastaContent: string,score_model_conservation: ScoreModel, xthreshold: number | null,): string[][] {
+
+   // let maxLength: number;
+
+   const fastaEntries &#x3D; this.parseFasta(fastaContent);
+    //this.fastaService.completeSequencesWithDash().subscribe
+
+    return this.formatPROSITEmotifsPattern(
+      this.xTresholdDivider(
+        this.countGroupRepeatedStrings(
+          fastaEntries,
+          this.groupRepeatedStrings(
+            this.scatteredConservationPattern(
+              fastaEntries
+              ,score_model_conservation)
+            )
+        ) ,xthreshold)
+    );
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'PROSITEProcessingService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

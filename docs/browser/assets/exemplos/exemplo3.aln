@@ -1,76 +1,49 @@
 CLUSTAL 2.1 multiple sequence alignment
 
 
-P49918          -------MSDASLRSTSTMERLVARGTFPVLVRT---SACRSLFG---PVDHEELSRELQ
-Q91603          -----MAAFHIALQEEMIVASPAALPRLSLGTGR---GACRNLFG---PIDHDELRSELK
-Q96TE0          -------MSN-VRVSNGSPSLERMDARQADHPKP---SACRNLFG---PVDHEELTRDLE
-Q4FK34          -------------------MSNL-GDVRPVPHRS---KVCRCLFG---PVDSEQLRRDCD
-Q179M8          ---MSARVCNPVALSEIAKLRSPAVVRKPMTNSISLARVKRDLFG---PVDKQESKNFID
-Q61CE7          ------------------------------------MSARRCLFGRPTPEQRARTREWLD
-Q9U6R5          -----------------------MAATTAGDGKR---KAARCLFGK--PDPEEQVSRQLN
-                                                      . * ***   *    .     .
+P49918          --------MSDASLRSTSTMERLVARGTFPVLVRT-----SACRSLFG---PVDHEELSR
+Q91603          --------MAAFHIALQEEMIVASPAALPRLSLGTGR---GACRNLFG---PIDHDELRS
+Q96TE0          --------MSN-VRVSNGSPSLERMDARQADHPKP-----SACRNLFG---PVDHEELTR
+Q4FK34          -------------------MSNL-GDVRPVPHRS------KVCRCLFG---PVDSEQLRR
+Q179M8          ------MSARVCNPVALSEIAKLRSPAVVRKPMTNSISLARVKRDLFG---PVDKQESKN
+Q9U6R5          -----------------------MAATTAGDGKR------KAARCLFGK--PDPEEQVSR
+Q61CE7          ---------------------------------------MSARRCLFGRPTPEQRARTRE
+                                                         . * ***   *    .   
 
-P49918          ARLAELNAEDQNRWDYDFQQDMPLR----GPG-RLQWTEVDSDSVPAFYRETVQVGRCRL
-Q91603          RQLKEIQASDCQRWNFDFESGTPL------KG-TFCWEPVETKDVPSFYS---PS-----
-Q96TE0          KHCRDMEEASQRKWNFDFQNHKPL------EG-KYEWQEVEKGSLPEFYYR---------
-Q4FK34          ALMAGCLQEARERWNFDFVTETPL------EG-NFVWERVRSLGLPKVYLS---------
-Q179M8          RQLAAQNDALSKKWGFDFTAGEPL-----QNHEQYQWERVPPTSAPACFTGMVTLTRG--
-Q61CE7          NACKRIREEESKKWGFDFELGMPLPSLMISTEVDYKYEILPECSVPEFYRT---------
-Q9U6R5          SSLEEMYKKDSRKFNFDFSGGVPIVG---SRG-DYEFESISASEVPSFYREKIVRPRK--
-                           .::.:**    *:            :  :     *  :           
+P49918          ELQARLAELNAEDQNRWDYDFQQDMPLR----GPG-RLQWTEVDSDSVPAFYRETVQVGR
+Q91603          ELKRQLKEIQASDCQRWNFDFESGTPL------KG-TFCWEPVETKDVPSFYS---PS--
+Q96TE0          DLEKHCRDMEEASQRKWNFDFQNHKPL------EG-KYEWQEVEKGSLPEFYYR------
+Q4FK34          DCDALMAGCLQEARERWNFDFVTETPL------EG-NFVWERVRSLGLPKVYLS------
+Q179M8          FIDRQLAAQNDALSKKWGFDFTAGEPL-----QNHEQYQWERVPPTSAPACFTGMVTLTR
+Q9U6R5          QLNSSLEEMYKKDSRKFNFDFSGGVPIVG---SRG-DYEFESISASEVPSFYREKIVRPR
+Q61CE7          WLDNACKRIREEESKKWGFDFELGMPLPSLMISTEVDYKYEILPECSVPEFYRT------
+                  .           .::.:**    *:            :  :     *  :        
 
-P49918          LLAPRP-VAVAVAVSPPLEPAAESLDGLEEAPEQLPSVPVPAPASTPPPVPVLAPAPAPA
-Q91603          -----------------------------------RSLAANTTPQSRQQQPLL-------
-Q96TE0          ---------------------------------------PPRPPKGACKVPAQE------
-Q4FK34          -----------------------------------PGSRS-RDDLGGDKRPSTS------
-Q179M8          -------------------------------AHRVPQSSTISEDLLDQRAERENAS----
-Q61CE7          --------------------------------------KVISVNTSHSTHTDLN------
-Q9U6R5          -----------------------------IIARRNSTPVSDTVEMPSESPPVVESN----
+P49918          CRLLLAPRP-VAVAVAVSPPLEPAAESLDGLEEAPEQLPSVPVPAPASTPPPVPVLAPAP
+Q91603          --------------------------------------RSLAANTTPQSRQQQPLL----
+Q96TE0          ------------------------------------------PPRPPKGACKVPAQE---
+Q4FK34          --------------------------------------PGSRS-RDDLGGDKRPSTS---
+Q179M8          G---------------------------------AHRVPQSSTISEDLLDQRAERENAS-
+Q9U6R5          K-------------------------------IIARRNSTPVSDTVEMPSESPPVVESN-
+Q61CE7          -----------------------------------------KVISVNTSHSTHTDLN---
                                                                             
 
-P49918          PAPVAAPVAAPVAVAVLAPAPAPAPAPAPAPAPVAAPAP--APAPA---PA------PAP
-Q91603          ----------------VSRQPEP-----REEAPVDTVRN--VPNPP---CA---------
-Q96TE0          ----------------------------SQDGSGSRPAAPLIGAPA--------------
-Q4FK34          ----------------------------SALLQG--PAPEDHVALS--------------
-Q179M8          --------------------------LYRHPSSISSPASVSGSDSE-----------SDC
-Q61CE7          -----------------------------LSSTTLTPLSSPSTSEK--------------
-Q9U6R5          ------------------ETPLLIASTSTEVTVYEKPVTRSSAAKQSIEQQETYNLKQTK
+P49918          APAPAPVAAPVAAPVAVAVLAPAPAPAPAPAPAPAPVAAPAP--APAPA---PA------
+Q91603          -------------------VSRQPEP-----REEAPVDTVRN--VPNPP---CA------
+Q96TE0          -------------------------------SQDGSGSRPAAPLIGAPA-----------
+Q4FK34          -------------------------------SALLQG--PAPEDHVALS-----------
+Q179M8          -----------------------------LYRHPSSISSPASVSGSDSE-----------
+Q9U6R5          ---------------------ETPLLIASTSTEVTVYEKPVTRSSAAKQSIEQQETYNLK
+Q61CE7          --------------------------------LSSTTLTPLSSPSTSEK-----------
                                                                             
 
-P49918          APAPAPDAAPQESAEQGANQGQRGQEPLADQLHSGISGRPAAGTAAASAN----------
-Q91603          ----------KENAEKIIKRCQGVKGPTKASANTSTQRRKREITTPIT------------
-Q96TE0          ----------NSEDTHLVDPKTDPSDSQTGLAEQCAGIRKRPATDDSS------------
-Q4FK34          -----------LSCTLVS---ERPEDSPGGPGTSQGRKRRQTSLTDFY------------
-Q179M8          SFETVRTHPLVLRSETIVSINTASTTTITSSSTPSFPATVNRAKRQQRIT----------
-Q61CE7          ---------EEPSLMDHNSSFEDEEEPKKWLFREPPTPRKSPQKRQQKVT----------
-Q9U6R5          LTNYMPVRKRRSETCLVTAAVSMSRSVSIDSSMESCKEKRGSKIVHNNKG----------
-                                                                            
-
-P49918          ------------------------------------------------------------
-Q91603          ------------------------------------------------------------
-Q96TE0          ------------------------------------------------------------
-Q4FK34          ------------------------------------------------------------
-Q179M8          ------------------------------------------------------------
-Q61CE7          ------------------------------------------------------------
-Q9U6R5          ------------------------------------------------------------
-                                                                            
-
-P49918          -----------GAAIKKLSGPLISDFFAKRKRSAPE-KSSGDVPAPCPSPSAAPGVGSVE
-Q91603          ------------------------DYFPKRKKILSAKPDAT---------KGVHLLCPLE
-Q96TE0          ---------------------------TQNKRANRTEENVS---------DGSPNAGSVE
-Q4FK34          --------------------------HSKRRLVFCKRKP---------------------
-Q179M8          ------------------------DYLKERKRLSTGAPKSTAAKKARQMLMTSASPSAAS
-Q61CE7          ------------------------DFYTITRKKNSMSP-KMSPKNVIYTP--KSRRPTVS
-Q9U6R5          ------------------------APKRPLRFVASNVPKSAQSSTSDTVLVSSPRSPPAK
-                                              :                             
-
-P49918          QTP---------RKRLR-------------------------------------------
-Q91603          QTP---------RKKIR-------------------------------------------
-Q96TE0          QTP----KKPGLRRRQT-------------------------------------------
-Q4FK34          ------------------------------------------------------------
-Q179M8          SISSSSSANATAQQDH--------------------------------------------
-Q61CE7          TR-----------SPY--------------------------------------------
-Q9U6R5          KMTTSTRRSRRPIEAGDF------------------------------------------
+P49918          PAPAPAPAPDAAPQESAEQGANQGQRGQEPLADQLHSGISGRPAAGTAAASAN-------
+Q91603          -------------KENAEKIIKRCQGVKGPTKASANTSTQRRKREITTPIT---------
+Q96TE0          -------------NSEDTHLVDPKTDPSDSQTGLAEQCAGIRKRPATDDSS---------
+Q4FK34          --------------LSCTLVS---ERPEDSPGGPGTSQGRKRRQTSLTDFY---------
+Q179M8          SDCSFETVRTHPLVLRSETIVSINTASTTTITSSSTPSFPATVNRAKRQQRIT-------
+Q9U6R5          QTKLTNYMPVRKRRSETCLVTAAVSMSRSVSIDSSMESCKEKRGSKIVHNNKG-------
+Q61CE7          ------------EEPSLMDHNSSFEDEEEPKKWLFREPPTPRKSPQKRQQKVT-------
                                                                             
 
 P49918          ------------------------------------------------------------
@@ -78,15 +51,42 @@ Q91603          ------------------------------------------------------------
 Q96TE0          ------------------------------------------------------------
 Q4FK34          ------------------------------------------------------------
 Q179M8          ------------------------------------------------------------
-Q61CE7          ------------------------------------------------------------
 Q9U6R5          ------------------------------------------------------------
+Q61CE7          ------------------------------------------------------------
                                                                             
 
-P49918          --------------
-Q91603          --------------
-Q96TE0          --------------
-Q4FK34          --------------
-Q179M8          --------------
-Q61CE7          --------------
-Q9U6R5          --------------
-                              
+P49918          --------------GAAIKKLSGPLISDFFAKRKRSAPE-KSSGDVPAPCPSPSAAPGVG
+Q91603          ---------------------------DYFPKRKKILSAKPDAT---------KGVHLLC
+Q96TE0          ------------------------------TQNKRANRTEENVS---------DGSPNAG
+Q4FK34          ------------------------------HSKRRLVFCKRKP-----------------
+Q179M8          ---------------------------DYLKERKRLSTGAPKSTAAKKARQMLMTSASPS
+Q9U6R5          ---------------------------APKRPLRFVASNVPKSAQSSTSDTVLVSSPRSP
+Q61CE7          ---------------------------DFYTITRKKNSMSP-KMSPKNVIYTP--KSRRP
+                                                 :                          
+
+P49918          SVEQTP---------RKRLR----------------------------------------
+Q91603          PLEQTP---------RKKIR----------------------------------------
+Q96TE0          SVEQTP----KKPGLRRRQT----------------------------------------
+Q4FK34          ------------------------------------------------------------
+Q179M8          AASSISSSSSANATAQQDH-----------------------------------------
+Q9U6R5          PAKKMTTSTRRSRRPIEAGDF---------------------------------------
+Q61CE7          TVSTR-----------SPY-----------------------------------------
+                                                                            
+
+P49918          ------------------------------------------------------------
+Q91603          ------------------------------------------------------------
+Q96TE0          ------------------------------------------------------------
+Q4FK34          ------------------------------------------------------------
+Q179M8          ------------------------------------------------------------
+Q9U6R5          ------------------------------------------------------------
+Q61CE7          ------------------------------------------------------------
+                                                                            
+
+P49918          ------------------
+Q91603          ------------------
+Q96TE0          ------------------
+Q4FK34          ------------------
+Q179M8          ------------------
+Q9U6R5          ------------------
+Q61CE7          ------------------
+                                  
